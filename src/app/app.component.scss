@@ -1,0 +1,37 @@
+
+  // Move to helper
+  .flex {
+    display: flex;
+  }
+
+  // Move to helper
+  .flex--column {
+    flex-direction: column;
+  }
+
+  // Move to helper
+  .flex--space {
+    justify-content: space-between;
+  }
+
+  .stack {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .stack__moment {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+
+  .stack__header {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1025px) {
+    .stack {
+      width: 450px;
+    }
+  }

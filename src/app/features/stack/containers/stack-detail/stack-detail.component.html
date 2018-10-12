@@ -1,0 +1,23 @@
+<div class="home">
+  <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+  <h1>Happy Stack Prototype</h1>
+
+  <div class="stack">
+
+    <hs-add-item></hs-add-item>
+
+    <div class="stack__moment">
+
+      <!-- Create a component => -->
+      <div class="stack__header flex flex--space">
+        <span class="stack__header__title">This morning</span>
+        <div class="stack__header__count">2 of 3 supplements</div>
+        <div class="stack__header__progress"></div>
+      </div>
+      
+      <hs-card-item *ngFor="let item in items" [item]="item"></hs-card-item>
+
+    </div> 
+  </div>
+
+</div>

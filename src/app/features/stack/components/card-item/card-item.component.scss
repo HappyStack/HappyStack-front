@@ -1,0 +1,42 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid #578BA5;
+    padding: 10px;  
+  }
+
+  .item__info {
+    text-align: left;
+  }
+
+  .item__name {
+    font-size: 15px;
+    color: #242C31;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+
+  .item__dosage {
+    font-size: 15px;
+    color: #242C31;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+
+  .item__hour {
+    font-size: 18px;
+    color: #578BA5;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 18px;
+  }
+
+  .item__logo {
+    width: 56px;
+    height: 56px;
+    margin:0 10px;
+    opacity: 0.50;
+    background:  #578BA5 url(../assets/hs_pills.png) no-repeat center center;
+    border-radius: 4px;
+  }
