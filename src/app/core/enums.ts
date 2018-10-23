@@ -1,5 +1,5 @@
-export enum ServingType {
-    Scoop = 'scoop',
-    Pill = 'pill',
-    Drop = 'drop'
-}
+export type ServingType =
+    | "scoop"
+    | "pill"
+    | "drop"
+

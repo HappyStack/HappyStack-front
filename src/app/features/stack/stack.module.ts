@@ -8,10 +8,25 @@ import { AddStackComponent } from './components/add-stack/add-stack.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { StackRoutingModule } from './stack-routing.module';
 
+import {
+  MatNativeDateModule,
+  MatSelectModule,
+  MatTooltipModule,
+  MatInputModule,
+  MatCheckboxModule } from '@angular/material'
+import { ItemFormComponent } from './form/item-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
-    StackRoutingModule
+    StackRoutingModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatInputModule,
+    MatCheckboxModule,
   ],
   declarations: [
     StackListComponent,
@@ -19,7 +34,8 @@ import { StackRoutingModule } from './stack-routing.module';
     CardStackComponent,
     CardItemComponent,
     AddStackComponent,
-    AddItemComponent
+    AddItemComponent,
+    ItemFormComponent
   ],
   
 })

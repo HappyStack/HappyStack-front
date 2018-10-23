@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StackApiService } from '../../../../core/api/stack.api';
-import { Item } from '../../../../core/models';
+import { IItem } from '../../../../core/models';
 
 @Component({
   selector: 'hs-stack-detail',
@@ -9,7 +9,7 @@ import { Item } from '../../../../core/models';
 })
 export class StackDetailComponent implements OnInit {
 
-  items: Item[]
+  items: IItem[]
 
   constructor(private stackService: StackApiService) { }
 

@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
-import { of } from "rxjs";
+import { of, Observable } from "rxjs";
 import { Api } from "./api";
 import { HttpClient } from "@angular/common/http";
-import { Item } from "../models";
+import { Item, IItem } from "../models";
 
 @Injectable({
     providedIn: 'root',
@@ -19,8 +19,9 @@ export class StackApiService extends Api {
         return this.http.post(`${this.domain}/`, item)
     }
     
-    fetchById(id: number) { //: Request<Item[]>
-        return of([
+    fetchById(userID: number): Observable<IItem[]> { // : Request<Item[]>
+
+        const mockItems: IItem[] = [
             {
                 "id": 1,
                 "name": "Magnesium",
@@ -48,6 +49,8 @@ export class StackApiService extends Api {
                 "servingType": "pill",
                 "timing": "0001-01-01T00:00:00Z"
             },
-        ])
+        ]
+
+        return of(mockItems)
     }
 }

@@ -1,0 +1,14 @@
+<form [formGroup]="itemForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      formControlName="name"
+      type="text"
+      autocomplete="name"
+      placeholder="name"
+      required>
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <button type="submit" [disabled]="itemForm.invalid">Save</button>
+</form>
