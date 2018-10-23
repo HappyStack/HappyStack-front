@@ -1,8 +1,8 @@
-import Item from './item.class'
+import { Item } from './item.class'
 
-export default class Stack {
+export class Stack {
     id!: number
     name!: string
     items!: Item[]
-  }
+}
   

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import Item from '../../../../core/models/item.class';
+import {Item} from '../../../../core/models';
 
 @Component({
   selector: 'hs-card-item',

@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-//import { MaterialModule } from '../material';
-
-export const COMPONENTS = [
-
-];
+import { PipesModule } from '../shared/pipes';
+import { SeoService } from './services/seo.service';
 
 @NgModule({
   imports: [
       CommonModule, 
       RouterModule, 
-      //MaterialModule
+      PipesModule
     ],
-  declarations: COMPONENTS,
-  exports: COMPONENTS,
+  declarations: [],
+  exports: [
+    PipesModule
+  ],
+  providers: [
+    SeoService,
+  ]
 })
-export class CoreModule {}
+export class CoreModule {
+  static forRoot() {
+    return {
+      ngModule: CoreModule
+    };
+  }
+}

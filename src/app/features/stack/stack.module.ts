@@ -6,10 +6,12 @@ import { CardStackComponent } from './components/card-stack/card-stack.component
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { AddStackComponent } from './components/add-stack/add-stack.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
+import { StackRoutingModule } from './stack-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    StackRoutingModule
   ],
   declarations: [
     StackListComponent,
@@ -18,7 +20,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     CardItemComponent,
     AddStackComponent,
     AddItemComponent
-  ]
-    
+  ],
+  
 })
 export class StackModule { }

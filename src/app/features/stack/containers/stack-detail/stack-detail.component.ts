@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StackApiService } from '../../../../core/api/stack.api';
+import { Item } from '../../../../core/models';
 
 @Component({
   selector: 'hs-stack-detail',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StackDetailComponent implements OnInit {
 
-  constructor() { }
+  items: Item[]
+
+  constructor(private stackService: StackApiService) { }
 
   ngOnInit() {
+    this.stackService.fetchById(1).subscribe(resp => this.items = resp)
   }
 
 }

@@ -4,11 +4,13 @@ import { SignupComponent } from './containers/signup/signup.component';
 import { PwdForgottenComponent } from './containers/pwd-forgotten/pwd-forgotten.component';
 import { PwdResetComponent } from './containers/pwd-reset/pwd-reset.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 @NgModule({
     imports: [
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AuthRoutingModule
     ],
     exports: [],
     declarations: [

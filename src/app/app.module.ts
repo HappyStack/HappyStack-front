@@ -17,6 +17,7 @@ import { UiHeaderComponent } from './uicomponents/ui-header/ui-header.component'
 import { UiFooterComponent } from './uicomponents/ui-footer/ui-footer.component';
 import { UiCookiesComponent } from './uicomponents/ui-cookies/ui-cookies.component';
 import { UiNotifyComponent } from './uicomponents/ui-notify/ui-notify.component';
+import { CoreModule } from './core/core.module';
 
 
 const uiComponents = [
@@ -34,8 +35,9 @@ const uiComponents = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule.forRoot(),
     LandingModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

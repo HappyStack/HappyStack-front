@@ -14,8 +14,10 @@
         <div class="stack__header__count">2 of 3 supplements</div>
         <div class="stack__header__progress"></div>
       </div>
-      
-      <hs-card-item *ngFor="let item in items" [item]="item"></hs-card-item>
+
+      <ng-container *ngFor="let item of items">
+        <hs-card-item  [item]="item"></hs-card-item>
+      </ng-container>
 
     </div> 
   </div>
