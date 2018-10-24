@@ -13,29 +13,29 @@ import { AuthModule } from './features/auth/auth.module';
 /**
  * UI Components
  */
-import { UiHeaderComponent } from './uicomponents/ui-header/ui-header.component';
-import { UiFooterComponent } from './uicomponents/ui-footer/ui-footer.component';
-import { UiCookiesComponent } from './uicomponents/ui-cookies/ui-cookies.component';
-import { UiNotifyComponent } from './uicomponents/ui-notify/ui-notify.component';
+// import { UiHeaderComponent } from './uicomponents/ui-header/ui-header.component';
+// import { UiFooterComponent } from './uicomponents/ui-footer/ui-footer.component';
+// import { UiCookiesComponent } from './uicomponents/ui-cookies/ui-cookies.component';
+// import { UiNotifyComponent } from './uicomponents/ui-notify/ui-notify.component';
 import { CoreModule } from './core/core.module';
 
 
-const uiComponents = [
-  UiHeaderComponent,
-  UiFooterComponent,
-  UiCookiesComponent,
-  UiNotifyComponent
-]
+// const uiComponents = [
+//   UiHeaderComponent,
+//   UiFooterComponent,
+//   UiCookiesComponent,
+//   UiNotifyComponent
+// ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...uiComponents,
+    // ...uiComponents,
   ],
   imports: [
+    CoreModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    CoreModule.forRoot(),
     LandingModule,
     AuthModule,
   ],

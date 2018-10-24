@@ -3,7 +3,7 @@ import { StackApiService } from '../../../../core/api/stack.api';
 import { IItem } from '../../../../core/models';
 
 @Component({
-  selector: 'hs-stack-detail',
+  selector: 'app-stack-detail',
   templateUrl: './stack-detail.component.html',
   styleUrls: ['./stack-detail.component.scss']
 })

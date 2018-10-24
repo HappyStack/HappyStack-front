@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hs-ui-header',
+  selector: 'app-ui-header',
   templateUrl: './ui-header.component.html',
   styleUrls: ['./ui-header.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hs-ui-cookies',
+  selector: 'app-ui-cookies',
   templateUrl: './ui-cookies.component.html',
   styleUrls: ['./ui-cookies.component.scss']
 })

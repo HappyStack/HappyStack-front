@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hs-ui-notify',
+  selector: 'app-ui-notify',
   templateUrl: './ui-notify.component.html',
   styleUrls: ['./ui-notify.component.scss']
 })

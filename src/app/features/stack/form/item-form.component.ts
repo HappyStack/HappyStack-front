@@ -4,7 +4,7 @@ import { IItem } from '../../../core/models';
 import { StackApiService } from '../../../core/api/stack.api';
 
 @Component({
-  selector: 'hs-ui-form-item',
+  selector: 'app-form-item',
   templateUrl: './item-form.component.html',
   styleUrls: ['./item-form.component.scss'],
 })

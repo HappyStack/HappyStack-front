@@ -7,15 +7,14 @@ import { CardItemComponent } from './components/card-item/card-item.component';
 import { AddStackComponent } from './components/add-stack/add-stack.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { StackRoutingModule } from './stack-routing.module';
-
+import { ItemFormComponent } from './form/item-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
-  MatNativeDateModule,
   MatSelectModule,
   MatTooltipModule,
   MatInputModule,
-  MatCheckboxModule } from '@angular/material'
-import { ItemFormComponent } from './form/item-form.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+  MatCheckboxModule,
+} from '@angular/material'
 
 @NgModule({
   imports: [

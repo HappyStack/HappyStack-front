@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../shared/pipes';
@@ -8,6 +8,11 @@ import { ItemApiService } from './api/item.api';
 import { UserApiService } from './api/user.api';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UiHeaderComponent } from '../uicomponents/ui-header/ui-header.component';
+import { UiFooterComponent } from '../uicomponents/ui-footer/ui-footer.component';
+import { UiCookiesComponent } from '../uicomponents/ui-cookies/ui-cookies.component';
+import { UiNotifyComponent } from '../uicomponents/ui-notify/ui-notify.component';
+import { MatToolbarModule } from '@angular/material'
 
 const API = [
   StackApiService,
@@ -19,22 +24,38 @@ const SERVICE = [
   SeoService
 ]
 
+const UICOMPONENTS = [
+  UiHeaderComponent,
+  UiFooterComponent,
+  UiNotifyComponent,
+  UiCookiesComponent
+]
+
+/**
+ * Create material Module
+ */
+
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     HttpClientModule,
     CommonModule, 
     RouterModule, 
     PipesModule,
-    BrowserAnimationsModule
+    MatToolbarModule,
   ],
-  declarations: [],
+  declarations: [
+    ...UICOMPONENTS
+  ],
   exports: [
-    PipesModule
+    PipesModule,
+    ...UICOMPONENTS
   ],
   providers: [
+    ...API,
     ...SERVICE,
-    ...API
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoreModule {
   static forRoot() {
